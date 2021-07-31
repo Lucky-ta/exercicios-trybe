@@ -1,0 +1,8 @@
+Bash
+carro
+computador
+coraçao
+Internet
+Pizza
+tomada
+Unix
