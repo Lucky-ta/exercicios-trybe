@@ -1,2 +1,1 @@
-# exercicios-trybe
-Repositório para exercicios feitos no curso da trybe.
+Neste dia continuei o trabalho com meu portfolio web agora com CSS, para estilizar meu portfolio
