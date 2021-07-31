@@ -1,2 +1,2 @@
-# exercicios-trybe
-Repositório para exercicios feitos no curso da trybe.
+Neste dia aprendi a instalar e as principais funcionalidades do git e github
+
