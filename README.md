@@ -1,2 +1,1 @@
-# exercicios-trybe
-Repositório para exercicios feitos no curso da trybe.
+Neste dia finalizei minha primeira parte do portfólio web
