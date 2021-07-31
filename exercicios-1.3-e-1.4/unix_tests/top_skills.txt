@@ -1,8 +1,8 @@
-Internet
-Unix
 Bash
-Pizza
 carro
 computador
 coraçao
+Internet
+Pizza
 tomada
+Unix
