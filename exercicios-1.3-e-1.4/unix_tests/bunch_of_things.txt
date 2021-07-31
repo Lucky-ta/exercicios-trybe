@@ -1,9 +1,3 @@
-arvore
-tela
-mouse
-radio
-Brasil
-Alemanha
 Afghanistan
 Albania
 Algeria
@@ -149,8 +143,6 @@ Qatar
 Romania
 Russian Federation
 Rwanda
-St Kitts & Nevis
-St Lucia
 Saint Vincent & the Grenadines
 Samoa
 San Marino
@@ -169,6 +161,8 @@ South Africa
 South Sudan
 Spain
 Sri Lanka
+St Kitts & Nevis
+St Lucia
 Sudan
 Suriname
 Swaziland
