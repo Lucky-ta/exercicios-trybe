@@ -1,2 +1,1 @@
-# exercicios-trybe
-Repositório para exercicios feitos no curso da trybe.
+Neste dia realizei meu primeiro projeto do curso que esta salvo em outro repositorio
