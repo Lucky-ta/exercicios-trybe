@@ -1,4 +1,4 @@
-//exerciico feito com base no gabarito
+//realiza com base no gabarito.
 let aliquotINSS;
 let aliquotIR;
 
