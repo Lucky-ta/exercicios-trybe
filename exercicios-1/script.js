@@ -31,6 +31,34 @@ function createDaysOfTheWeek() {
         li.classList.add('friday');
     };
   };
-  
 
-  
+//implementa uma função que recebe como parametro a string 'feriados' e cria dinamicamente um botão com o nome 'feriados'
+function cria_feriados(Feriados){
+let feriado_button = document.createElement('button');
+let div_buttons_container = document.querySelector('.buttons-container');
+feriado_button.innerText = 'Feriados';
+feriado_button.id = 'btn-holiday'
+div_buttons_container.appendChild(feriado_button);
+};
+cria_feriados('Feriados');
+//Implementa uma função que adiciona ao botao 'Feriados' um evento de click que muda a cor
+// de fundo dos dias que possuem a classe 'holiday'.
+function display_feriado () {
+  let background_color = 'blue';
+  let feriado_button = document.getElementById('btn-holiday');
+  let lista_com_feriados = document.getElementsByClassName('holiday');
+  let branca = 'white'
+
+
+  feriado_button.addEventListener('click', function(){
+    for (let i=0; i < lista_com_feriados.length; i+=1) {
+      if (lista_com_feriados[i].style.backgroundColor != background_color){
+        lista_com_feriados[i].style.backgroundColor = background_color;
+      }
+      else{
+        lista_com_feriados[i].style.backgroundColor = branca
+      }
+    }
+  })
+}
+display_feriado();
