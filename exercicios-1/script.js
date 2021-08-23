@@ -118,3 +118,14 @@ function mouse_out () {
 }
 mouse_over()
 mouse_out()
+
+function personaliza (funcao) {
+  let container_funcao = document.querySelector('.my-tasks');
+  let create_span = document.createElement('span');
+
+  create_span.innerText = funcao;
+  container_funcao.appendChild(create_span)
+
+}
+personaliza('Cozinhar');
+
