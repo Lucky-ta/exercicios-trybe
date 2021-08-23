@@ -62,3 +62,39 @@ function display_feriado () {
   })
 }
 display_feriado();
+
+//Implemente uma função que receba como parametro a string 'Sexta-feira' e crie dinamicamente um
+//botão com o nome 'Sexta-feira'.
+
+function friday_button (Sextafeira) {
+  let friday_button = document.createElement('button');
+  friday_button.innerText = 'Sexta-feira';
+  friday_button.id = 'btn-friday'
+  let div_buttons_container = document.querySelector('.buttons-container');
+  div_buttons_container.appendChild(friday_button);
+  
+}
+friday_button('Sexta-feira');
+
+//Implemente uma função que adicione ao botão 'Sexta-feira' um evento de click que modifica
+//o texto exibido nos dias que são Sexta-feiras.
+
+function display_sexta (fridaylist) {
+  let friday_list = document.getElementsByClassName('friday');
+  let muda_texto = 'SEXTOU!!';
+  let friday_button = document.getElementById('btn-friday')
+
+
+  friday_button.addEventListener('click', function() {
+    for (let i=0; i < friday_list.length; i+=1) {
+      if(friday_list[i].innerText != muda_texto){
+        friday_list[i].innerText = muda_texto;
+      }
+      else{
+        friday_list[i].innerText = fridaylist[i]
+      }
+    }
+  })
+}
+let dezFridays = [4,11,18,25]
+display_sexta(dezFridays)
