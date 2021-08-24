@@ -129,3 +129,48 @@ function personaliza (funcao) {
 }
 personaliza('Cozinhar');
 
+function add_color (cor) {
+  let task_container = document.querySelector('.my-tasks');
+  let new_task = document.createElement('div');
+
+  new_task.className = 'task';
+  new_task.style.backgroundColor = cor;
+  task_container.appendChild(new_task)
+}
+add_color('green');
+
+function display_div () {
+  let task_selected = document.getElementsByClassName('task selected')
+  let task = document.querySelector('.task');
+
+  task.addEventListener('click', function(event) {
+    if (task_selected.length === 0) {
+      event.target.className = 'task selected'
+    }
+     else {
+      event.target.className = 'task'
+    }
+  })
+}
+display_div()
+
+
+function clica_mes () {
+  let dia = document.querySelector('#days');
+  let task_selected = document.getElementsByClassName('task selected')
+  let taskDiv = document.querySelector('.task')
+  let classe = 'task selected';
+  let taskColor = taskDiv.style.backgroundColor
+
+  dia.addEventListener('click', function(event){
+    let eventTargetColor = event.target.style.color;
+    if (task_selected.length > 0 && eventTargetColor !== taskColor ) {
+      let color = task_selected[0].style.backgroundColor;
+      event.target.style.backgroundColor = color;
+    }
+    else if ( eventTargetColor === taskColor && task_selected.length !== 0) {
+      event.target.style.color = 'rgb(119,119,119)'
+    }
+  })
+}
+clica_mes()
