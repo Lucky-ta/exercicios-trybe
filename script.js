@@ -5,6 +5,8 @@ const textBtn = document.getElementById('text-btn');
 const text = document.getElementById('text-color')
 const colorInput = document.getElementById('text-input')
 const fontSizeBtn = document.getElementById('font-size');
+const spaceLine = document.getElementById('space-line');
+
 
 
 colorBtn.addEventListener('click',function() {
@@ -26,4 +28,11 @@ fontSizeBtn.addEventListener('change', function () {
    let textFont = this.value
    text.style.fontFamily = textFont
 })
+
+spaceLine.addEventListener('change', function() {
+    let textSpace = this.value
+    text.style.lineHeight = textSpace
+})
+
 }
+
