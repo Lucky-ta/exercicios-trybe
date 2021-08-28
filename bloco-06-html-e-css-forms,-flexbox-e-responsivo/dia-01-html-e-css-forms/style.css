@@ -1,0 +1,14 @@
+#first-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#radio-container {
+    display: flex;
+    text-align: center;
+    padding-left: 30px;
+}
+
+#radio-container #radiobtn-container {
+    margin-right: 30px;
+}
