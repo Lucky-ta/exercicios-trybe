@@ -4,8 +4,9 @@ const colorBtn = document.getElementById('color-btn');
 const textBtn = document.getElementById('text-btn');
 const text = document.getElementById('text-color')
 const colorInput = document.getElementById('text-input')
-const fontSizeBtn = document.getElementById('font-size');
+const fontFamily = document.getElementById('font-family');
 const spaceLine = document.getElementById('space-line');
+const fontSize = document.getElementById('font-size');
 
 
 
@@ -24,7 +25,7 @@ textBtn.addEventListener('click', function() {
 let textoSalvo = localStorage.getItem('cortexto')
 text.style.color = textoSalvo
 
-fontSizeBtn.addEventListener('change', function () {
+fontFamily.addEventListener('change', function () {
    let textFont = this.value
    text.style.fontFamily = textFont
 })
@@ -32,6 +33,11 @@ fontSizeBtn.addEventListener('change', function () {
 spaceLine.addEventListener('change', function() {
     let textSpace = this.value
     text.style.lineHeight = textSpace
+})
+
+fontSize.addEventListener('change', function() {
+    let textSize = this.value;
+    text.style.fontSize = textSize
 })
 
 }
