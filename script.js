@@ -1,9 +1,11 @@
 window.onload = function () {
-let backgroundColor = document.getElementById('backgroundColor');
-let colorBtn = document.getElementById('color-btn');
-let textBtn = document.getElementById('text-btn');
-let text = document.getElementById('text-color')
-let colorInput = document.getElementById('text-input')
+const backgroundColor = document.getElementById('backgroundColor');
+const colorBtn = document.getElementById('color-btn');
+const textBtn = document.getElementById('text-btn');
+const text = document.getElementById('text-color')
+const colorInput = document.getElementById('text-input')
+const fontSizeBtn = document.getElementById('font-size');
+
 
 colorBtn.addEventListener('click',function() {
     let cor = document.body.style.backgroundColor = backgroundColor.value
@@ -19,5 +21,9 @@ textBtn.addEventListener('click', function() {
 })
 let textoSalvo = localStorage.getItem('cortexto')
 text.style.color = textoSalvo
-}
 
+fontSizeBtn.addEventListener('change', function () {
+   let textFont = this.value
+   text.style.fontFamily = textFont
+})
+}
