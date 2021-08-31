@@ -12,3 +12,8 @@
 #radio-container #radiobtn-container {
     margin-right: 30px;
 }
+
+#second-container {
+    display: flex;
+    flex-direction: column;
+}

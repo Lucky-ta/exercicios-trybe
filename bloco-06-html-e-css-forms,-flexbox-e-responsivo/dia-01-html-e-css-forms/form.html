@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<form action="script.js" id="form">
 <fieldset id="first-container">
     <legend>Formulário</legend>
     Nome: <input type="text" placeholder="Digite seu nome aqui..." maxlength="40" required>
@@ -27,9 +27,18 @@
                 <input id="apartamento-id" value="Apartamento" type="radio" required>
         </label>
     </div>
-
 </fieldset>
-
+<fieldset>
+    <div id="second-container">
+        Resumo do currículo: <textarea name="resumoCurriculo" id="resumoCurriculo" cols="30" rows="10" maxlength="1000" required></textarea>
+        Cargo: <input type="text" maxlength="40" required>
+        Descrição do cargo: <input type="text" maxlength="500" required>
+        Data de inicio: <input type="date" required>
+    </div>
+</fieldset>
+<button id="submit-btn" type="submit">Enviar</button>
+<button id="clear-btn">Limpar todos os campos</button>
+</form>
 
 
 <script src="script.js"></script>
