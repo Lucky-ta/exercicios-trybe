@@ -63,4 +63,15 @@ const books = [
   },
 ];
 
-// Adicione o código do exercício aqui:
+const expectedResult = [
+  'O Senhor dos Anéis',
+  'Fundação',
+  'O Chamado de Cthulhu',
+];
+
+function oldBooks() {
+  const livroVelho = books.filter((livro) => (2021 - livro.releaseYear) > 60)
+  return livroVelho.map((livro) => livro.name);
+}
+console.log(oldBooks());
+assert.deepStrictEqual(oldBooks(), expectedResult);
