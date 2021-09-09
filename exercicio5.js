@@ -1,4 +1,5 @@
 const assert = require('assert');
+const { resourceUsage } = require('process');
 
 const books = [
   {
@@ -63,4 +64,20 @@ const books = [
   },
 ];
 
-// Adicione o código do exercício aqui:
+const expectedResult = [
+  'Frank Herbert',
+  'George R. R. Martin',
+  'Isaac Asimov',
+  'J. R. R. Tolkien',
+];
+
+function fantasyOrScienceFictionAuthors() {
+ return books.filter((genero) => genero
+ .genre === 'Ficção Científica' || genero
+ .genre === 'Fantasia')
+ .map((nome) => nome.author.name).sort()
+}
+
+console.log(fantasyOrScienceFictionAuthors());
+
+assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult);
