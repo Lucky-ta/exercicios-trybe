@@ -1,2 +1,8 @@
-const sum = (a, b) => a + b;
+const sum = (a, b) => {
+    if (typeof a != 'number' || typeof b != 'number') {
+        return false
+    }
+    return a + b
+};
 
+module.exports = sum;
