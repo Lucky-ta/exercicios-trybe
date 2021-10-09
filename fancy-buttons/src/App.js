@@ -1,7 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
 
-function App() {
+class App extends React.Component {
+  handleClickMsg() {
+    console.log("Heyy! I'm working!");
+  }
+
+  render() {
   return (
     <div className="App">
       <header className="App-header">
@@ -18,8 +24,10 @@ function App() {
           Learn React
         </a>
       </header>
+      <button onClick={this.handleClickMsg}>Print msg on console.</button>
     </div>
   );
+  }
 }
 
 export default App;
