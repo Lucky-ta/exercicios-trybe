@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
+import FirstMsgBtn from './components/FirstMsgBtn';
+import SecondtMsgBtn from './SecondMsgBtn';
+import ThirdtMsgBtn from './ThirdMsgBtn';
 
 class App extends React.Component {
-  handleClickMsg() {
-    console.log("Heyy! I'm working!");
-  }
 
   render() {
   return (
@@ -23,8 +23,10 @@ class App extends React.Component {
         >
           Learn React
         </a>
+        <p><FirstMsgBtn /></p>
+        <p><SecondtMsgBtn /></p>
+        <p><ThirdtMsgBtn /></p>
       </header>
-      <button onClick={this.handleClickMsg}>Print msg on console.</button>
     </div>
   );
   }
