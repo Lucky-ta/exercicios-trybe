@@ -1,7 +1,9 @@
 // 1 - Crie uma função que gere um número aleatório
 
-
 // Defina uma função que gere um número aleatório entre 0 e 100.
+import { firstFunction, secondFunction, thirdFunction } from "./service";
+
+
 function returnRandoNumber() {
     const maxNubmer = 100
     return Math.floor(Math.random() * maxNubmer);
@@ -65,7 +67,41 @@ describe('testando implementações', () => {
         expect(returnRandoNumber).toHaveBeenCalled();
         expect(returnRandoNumber).toHaveBeenCalledTimes(1);
         expect(returnRandoNumber).toHaveBeenCalledWith(2);
-        
+
     })
 
 })
+jest.mock("./service");
+ 
+describe("testandoo implementações", () => {
+  test("mockando função para receber um parâmetro e retornar em caixa baixa", () => {
+    firstFunction.mockImplementation(a => a.toLowerCase());
+
+    expect(firstFunction("UPPERCASE")).toBe("uppercase");
+    expect(firstFunction).toHaveBeenCalled();
+    expect(firstFunction).toHaveBeenCalledTimes(1);
+    expect(firstFunction).toHaveBeenCalledWith("UPPERCASE");
+
+    firstFunction.mockRestore();
+
+    expect(firstFunction("lowercase")).toBe("LOWERCASE");
+  });
+
+  test("mockando função que recebe um parâmetro e retorna a última letra", () => {
+    secondFunction.mockImplementation(a => a.charAt(a.length - 1));
+
+    expect(secondFunction("letter")).toBe("r");
+    expect(secondFunction).toHaveBeenCalled();
+    expect(secondFunction).toHaveBeenCalledTimes(1);
+    expect(secondFunction).toHaveBeenCalledWith("letter");
+  });
+
+  test("mockando função que recebe 3 parâmetros e os concatena", () => {
+    thirdFunction.mockImplementation((a, b, c) => a.concat(b, c));
+
+    expect(thirdFunction("tr", "y", "be")).toBe("trybe");
+    expect(thirdFunction).toHaveBeenCalled();
+    expect(thirdFunction).toHaveBeenCalledTimes(1);
+    expect(thirdFunction).toHaveBeenCalledWith("tr", "y", "be");
+  });
+});
