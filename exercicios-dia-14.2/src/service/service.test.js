@@ -31,5 +31,15 @@ describe('Teste para funçao de gerar numero randomico', () => {
         expect(returnRandoNumber).toHaveBeenCalledTimes(2)
 
     })
-})
 
+    test('testando se a função foi chamada, qual seu retorno, quantas vezes foi chamada e com quais parâmetros', () => {
+        returnRandoNumber = jest.fn().mockImplementationOnce((a, b) => a / b);
+
+        expect(returnRandoNumber(2, 2)).toBe(1)
+        expect(returnRandoNumber).toHaveBeenCalled();
+        expect(returnRandoNumber).toHaveBeenCalledTimes(1);
+        expect(returnRandoNumber).toHaveBeenCalledWith(2, 2)
+
+    })
+
+})
